@@ -57,4 +57,13 @@ function in_date($tgl){
     return $dd . "-" . $mm . "-" . $yy;
 }
 
+function htgUmur($tgl_lahir){
+    $tglLahir = new DateTime($tgl_lahir);
+    $hariini = new DateTime("today");
+
+    $umur = $hariini->diff($tglLahir)->y;
+
+    return $umur . " tahun";
+}
+
 ?>
